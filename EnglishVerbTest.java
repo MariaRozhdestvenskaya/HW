@@ -1,9 +1,10 @@
-package Hw;
+
 import java.util.Scanner;
 
 public class EnglishVerbTest {
 
 	public static void main(String[] args) {
+		System.out.println("only for test");
 		Scanner scan = new Scanner(System.in);
 		int result = 0;
 		String[] question = new String[3];
