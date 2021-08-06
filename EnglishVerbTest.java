@@ -1,4 +1,3 @@
-package Hw;
 import java.util.Scanner;
 
 public class EnglishVerbTest {
