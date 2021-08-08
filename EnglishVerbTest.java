@@ -43,13 +43,12 @@ public class EnglishVerbTest {
 		}
 		
 		for (int i = 0; i < question.length; i++) {
+				int count = studentAnswer[i] - 1;
 				System.out.println(question[i]);
 				if (studentAnswer[i] == correctAnswer[i]) {
-					int count = studentAnswer[i] - 1;
 					System.out.print("Ваш ответ - " + variantAns[i][count]);
 					System.out.println(" - Верно.");
-									} else {
-					int count = studentAnswer[i] - 1;					
+				} else {		
 					System.out.print("Ваш ответ - " + variantAns[i][count]);
 					System.out.println(" - Неверно.");
 					System.out.println("Правильный ответ - " + variantAns[i][correctAnswer[i]]);
