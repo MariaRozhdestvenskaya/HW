@@ -34,6 +34,7 @@ public class MathTest {
 	}
 	public void takeStudentAns(int a) {
 		
+		scan.reset();
 		while (!scan.hasNextInt()) {
 			System.out.println("¬ведите номер правильного ответа.");
 			scan.next();
@@ -41,7 +42,8 @@ public class MathTest {
 		do {
 			studentAns[a] = scan.nextInt();
 		} while (studentAns[a] < 1 | studentAns[a] > variantAns[a].length);
-		
+
+	
 	}
 	public void calculateResult() {
 		for (int i = 0; i < correctAns.length; i++) {
