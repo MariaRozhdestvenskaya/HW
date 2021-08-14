@@ -1,4 +1,3 @@
-package HW;
 
 public class MathTestDemo {
 

@@ -1,4 +1,4 @@
-package HW.testing;
+package testing;
 
 import java.util.ArrayList;
 import java.util.Scanner;
