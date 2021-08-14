@@ -1,4 +1,4 @@
-package testing;
+package HW.testing;
 
 //import java.util.Scanner;
 
