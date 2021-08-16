@@ -1,59 +1,55 @@
-package HW;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BubbleSort {
 
 	public static void main(String[] args) {
 		
 		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(3, 6, -5, 7, 87364));
-		nums.add(-398);
-		nums.add(72643);
+		
+		int a, b, t;
 		
 		System.out.print ("The array to sort: ");
-		show(nums);
+		for (int i = 0; i < nums.size(); i++)
+			System.out.print (" "+ nums.get(i));
+		System.out.println ();
+		
+		for (a = 1; a < nums.size(); a++) 
+			for (b = nums.size()-1; b >= a; b--) {
+				if (nums.get(b-1) > nums.get(b)) {
+					t = nums.get(b-1);
+					nums.set(b-1, nums.get(b));
+					nums.set(b, t);
+			}
+		}
 		
 		System.out.print ("From min to max: ");
-		bubbleSortMinMax(nums);
-		show(nums);
+		for (int i = 0; i < nums.size(); i++)
+			System.out.print (" " + nums.get(i));
+		System.out.println ();
+		
+		for (a = 1; a < nums.size(); a++) 
+			for (b = nums.size()-1; b >= a; b--) {
+				if (nums.get(b-1) < nums.get(b)) {
+					t = nums.get(b-1);
+					nums.set(b-1, nums.get(b));
+					nums.set(b, t);
+			}
+		}
 		
 		System.out.print ("From max to min: ");
-		bubbleSortMaxMin(nums);
-		show(nums);
+		for (int i = 0; i < nums.size(); i++)
+			System.out.print (" " + nums.get(i));
+		System.out.println ();
+		
+		nums.sort(null);
 		
 		System.out.print ("Sorted with 'sort' method: ");
-		nums.sort(Comparator.naturalOrder());
-		show(nums);
+		for (int i = 0; i < nums.size(); i++)
+			System.out.print (" " + nums.get(i));
+		System.out.println ();
 		
-	}
-	
-	static void show(ArrayList<Integer> x) {
-		for (Integer i: x) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-	}
-	
-	static void bubbleSortMinMax(ArrayList<Integer> x) {
-		for (int a = 1; a < x.size(); a++) 
-			for (int b = x.size()-1; b >= a; b--) {
-				if (x.get(b-1) > x.get(b)) {
-					int t = x.get(b-1);
-					x.set(b-1, x.get(b));
-					x.set(b, t);
-			}
-		}
-	}
-	
-	static void bubbleSortMaxMin(ArrayList<Integer> x) {
-		for (int a = 1; a < x.size(); a++) 
-			for (int b = x.size()-1; b >= a; b--) {
-				if (x.get(b-1) < x.get(b)) {
-					int t = x.get(b-1);
-					x.set(b-1, x.get(b));
-					x.set(b, t);
-			}
-		}
+
 	}
 
 }

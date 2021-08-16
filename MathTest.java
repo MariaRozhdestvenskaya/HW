@@ -1,5 +1,3 @@
-package HW;
-
 import java.util.Scanner;
 
 public class MathTest {
