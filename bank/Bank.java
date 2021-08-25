@@ -18,9 +18,17 @@ public class Bank {
 		Account a005 = new Account(c003);
 		Account a006 = new Account(c003);
 		
+		a001.changeTotal(3800);
+		
+		
 		c001.showAccounts();
 		c002.showAccounts();
 		c003.showAccounts();
+		
+		Client.showClientInfo(a005);
+		
+		
+		
 		
 		
 

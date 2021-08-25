@@ -3,7 +3,7 @@ package HW.bank;
 public class Account {
 	
 	int total;
-	static int number;
+	static int number = 1;
 	private int clientID;
 	private int accountNumber;
 	
@@ -24,8 +24,12 @@ public class Account {
 	public void showAccount() {
 		System.out.println("Account# " + accountNumber + ": " + total);
 	}
-	
-	
+	public int getClientID() {
+		return clientID;
+	}
+	public void showClient() {
+		
+	}
 	
 
 }

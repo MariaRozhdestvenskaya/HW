@@ -9,23 +9,24 @@ import java.util.Set;
 
 public class Client {
 	
-	static 	Map<Client, Client> clients = new HashMap<Client, Client>();
+	static 	Map<Integer, Client> clients = new HashMap<Integer, Client>();
 	
-	static int num; 
-	private int clientID = 1;
+	static int num = 1; 
+	private Integer clientID = 1;
 	private String firstName;
 	private String lastName;
 	private LocalDate birthDate;
-	private String fullName = firstName + lastName;
+	private String fullName;
 	private Set <Account> accounts;
 		
 	Client(String fname, String lname, LocalDate bDay) {
 		clientID = num++;
 		firstName = fname;
 		lastName = lname;
+		fullName = fname + " " + lastName;
 		birthDate = bDay;	
 		accounts = new HashSet<>();
-		clients.put(this, this);
+		clients.put(clientID, this);
 			
 	}
 	
@@ -40,8 +41,8 @@ public class Client {
 	public int getClientID () {
 		return clientID;
 	}	
-	public String getName() {
-		return fullName;
+	public void showName() {
+		System.out.println(fullName);
 	}
 	public void addAccount(Account x) {
 		accounts.add(x);
@@ -56,6 +57,10 @@ public class Client {
 		}
 		System.out.println();
 	}
+	public static void showClientInfo (Account x) {
+		clients.get(x.getClientID()).showName();
+		clients.get(x.getClientID()).showAccounts();
+		}
 	
 
 }
